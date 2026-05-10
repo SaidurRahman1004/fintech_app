@@ -12,10 +12,13 @@ class SplashScreen extends GetView<SplashController> {
     return Scaffold(
       backgroundColor: AppColors.primary,
       body: Center(
-        child: Image.asset(
+        child: SvgPicture.asset(
           AppAssets.logo,
           width: 150,
           height: 150,
+          placeholderBuilder: (BuildContext context) => const CircularProgressIndicator(
+            color: Colors.white,
+          ),
         ),
       ),
     );
