@@ -1,0 +1,18 @@
+import 'dart:async';
+import 'package:get/get.dart';
+import '../../../routes/app_routes.dart';
+class SplashController extends GetxController {
+  @override
+  void onInit(){
+    super.onInit();
+    _startTimer();
+  }
+
+  void _startTimer() {
+    Timer(const Duration(seconds: 3), () {
+      // Use offNamed to remove splash from the navigation stack
+      Get.offNamed(Routes.LOGIN);
+    });
+  }
+
+}
